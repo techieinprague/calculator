@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="container">
+        <input type="text" class="screen" value="" readonly user-select="none">
+        <div class="keys">
+            <button type= "button" id="num1"   class="numbers" value="1">1</button>
+            <button type= "button" id="num2"   class="numbers" value="2">2</button>
+            <button type= "button" id="num3"   class="numbers" value="3">3</button>
+
+            <button type= "button" id="operators1"     class="operators" value="+">+</button>
+            <button type= "button" id="num4"  class="numbers" value="4">4</button>
+            <button type= "button" id="num5"  class="numbers" value="5">5</button>
+            <button type= "button" id="num6"  class="numbers" value="6">6</button>
+
+            <button type= "button" id="operators2" class="operators" value="-">-</button>
+            <button type= "button" id="num7" class="numbers" value="7">7</button>
+            <button type= "button" id="num8" class="numbers" value="8">8</button>
+            <button type= "button" id="num9" class="numbers" value="9">9</button>
+
+            <button type= "button" id="operators3"    class="operators" value="/">&divide;</button>
+            <button type= "button" id="equalto"  class="special" value="=">=</button>
+            <button type= "button" id="num0"     class="numbers" value="0">0</button>
+            <button type= "button" id="clear"    class="clear" value="">C</button>
+            <button type= "button" id="operators4"  class="operators" value="*">&times;</button>
+            
+        </div>   
+    </div>  
+    <script src="javascript.js">
+        document.getElementsByClassName("screen").addEventlistener('select', function() {
+            this.selectionStart = this.selectionEnd;
+}, false);
+    </script>
+
+
+</body>
+</html>
